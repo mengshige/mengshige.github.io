@@ -55,18 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="github   (302545782@qq.com)">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about me">
-<meta property="og:url" content="http://mengshige.github.io/about/index.html">
+  <meta name="description" content="ros编译出现如下错误 123/opt/ros/kinetic/include/ros/serialization.h:136:5: error: ‘const struct robot_msgs::IOSrvRequest_&amp;lt;std::allocator&amp;lt;void&amp;gt; &amp;gt;’ has no member named ‘deserialize’     t.deserializ">
+<meta name="keywords" content="ros">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ros编译错误deserialize">
+<meta property="og:url" content="http://mengshige.github.io/2020/09/29/ros编译错误deserialize/index.html">
 <meta property="og:site_name" content="MSG">
-<meta property="og:description" content="github   (302545782@qq.com)">
+<meta property="og:description" content="ros编译出现如下错误 123/opt/ros/kinetic/include/ros/serialization.h:136:5: error: ‘const struct robot_msgs::IOSrvRequest_&amp;lt;std::allocator&amp;lt;void&amp;gt; &amp;gt;’ has no member named ‘deserialize’     t.deserializ">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-19T15:13:02.000Z">
+<meta property="og:updated_time" content="2020-09-29T08:07:58.422Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about me">
-<meta name="twitter:description" content="github   (302545782@qq.com)">
-  <link rel="canonical" href="http://mengshige.github.io/about/">
+<meta name="twitter:title" content="ros编译错误deserialize">
+<meta name="twitter:description" content="ros编译出现如下错误 123/opt/ros/kinetic/include/ros/serialization.h:136:5: error: ‘const struct robot_msgs::IOSrvRequest_&amp;lt;std::allocator&amp;lt;void&amp;gt; &amp;gt;’ has no member named ‘deserialize’     t.deserializ">
+  <link rel="canonical" href="http://mengshige.github.io/2020/09/29/ros编译错误deserialize/">
 
 
 <script id="page-configurations">
@@ -74,13 +75,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>about me | MSG</title>
+  <title>ros编译错误deserialize | MSG</title>
   
 
 
@@ -210,61 +211,159 @@
         <div class="content-wrap">
             
 
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-  
-
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
-    
-    
-    
-    <div class="post-block page">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://mengshige.github.io/2020/09/29/ros编译错误deserialize/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mengshige">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MSG">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">ros编译错误deserialize
 
-<h1 class="post-title" itemprop="name headline">about me
+          
+        </h1>
 
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-<div class="post-meta">
+              
+                
+              
+
+              <time title="创建时间：2020-09-29 16:06:31 / 修改时间：16:07:58" itemprop="dateCreated datePublished" datetime="2020-09-29T16:06:31+08:00">2020-09-29</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编译错误/" itemprop="url" rel="index"><span itemprop="name">编译错误</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>ros编译出现如下错误</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/opt/ros/kinetic/include/ros/serialization.h:136:5: error: ‘const struct robot_msgs::IOSrvRequest_&lt;std::allocator&lt;void&gt; &gt;’ has no member named ‘deserialize’</span><br><span class="line">     t.deserialize(stream.getData());</span><br></pre></td></tr></table></figure>
+<p>原因是 声明服务的回调函数参数用了const</p>
+
+	
+  <div class="my_post_copyright">
+    <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+    
+    <!-- JS库 sweetalert 可修改路径 -->
+    <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <p><span>本文标题:</span><a href="/2020/09/29/ros编译错误deserialize/">ros编译错误deserialize</a></p>
+    <p><span>文章作者:</span><a href="/" title="访问 mengshige 的个人博客">mengshige</a></p>
+    <p><span>发布时间:</span>2020年09月29日 - 16:06</p>
+    <p><span>最后更新:</span>2020年09月29日 - 16:07</p>
+  <p><span>原始链接:</span><a href="/2020/09/29/ros编译错误deserialize/" title="ros编译错误deserialize">http://mengshige.github.io/2020/09/29/ros编译错误deserialize/</a>
+      <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://mengshige.github.io/2020/09/29/ros编译错误deserialize/"  aria-label="复制成功！"></i></span>
+    </p>
+    <p><span>版权声明:</span>本博客所有文章除特别声明外，均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"><i class="fa fa-creative-commons"></i>BY-NC-SA </a>许可协议。转载请注明出处!</p>  
+  </div>
+  <script> 
+      var clipboard = new Clipboard('.fa-clipboard');
+        $(".fa-clipboard").click(function(){
+        clipboard.on('success', function(){
+          swal({   
+            title: "",   
+            text: '复制成功',
+            icon: "success", 
+            showConfirmButton: true
+            });
+          });
+      });  
+  </script>
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-        
-          <p><a href="https://mengshige.github.com" target="_blank" rel="noopener">github</a>  </p>
-<p>(<a href="mailto:302545782@qq.com" target="_blank" rel="noopener">302545782@qq.com</a>)</p>
-
-        
-      </div>
-      
-      
-      
     </div>
-    
 
     
     
     
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/ros/" rel="tag"># ros</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/09/29/修改grub启动时间/" rel="next" title="修改grub启动时间">
+                  <i class="fa fa-chevron-left"></i> 修改grub启动时间
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2020/10/19/usb-端口绑定/" rel="prev" title="usb 端口绑定">
+                  usb 端口绑定 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
   </div>
 
 

@@ -55,18 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="github   (302545782@qq.com)">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about me">
-<meta property="og:url" content="http://mengshige.github.io/about/index.html">
+  <meta name="description" content="查看usb设备端口编号  1$udevadm info /dev/ttyUSB0 例如第一行,记住1-4:1.01P: /devices/pci0000:00/0000:00:14.0/usb1/1-4/1-4:1.0/ttyUSB1/tty/ttyUSB0  新建&amp;amp;编辑 rules文件12$sudo touch /etc/udev/rules.d/myUSB.rules$sudo vi">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="usb 端口绑定">
+<meta property="og:url" content="http://mengshige.github.io/2020/10/19/usb-端口绑定/index.html">
 <meta property="og:site_name" content="MSG">
-<meta property="og:description" content="github   (302545782@qq.com)">
+<meta property="og:description" content="查看usb设备端口编号  1$udevadm info /dev/ttyUSB0 例如第一行,记住1-4:1.01P: /devices/pci0000:00/0000:00:14.0/usb1/1-4/1-4:1.0/ttyUSB1/tty/ttyUSB0  新建&amp;amp;编辑 rules文件12$sudo touch /etc/udev/rules.d/myUSB.rules$sudo vi">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-19T15:13:02.000Z">
+<meta property="og:updated_time" content="2020-10-19T07:36:57.166Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about me">
-<meta name="twitter:description" content="github   (302545782@qq.com)">
-  <link rel="canonical" href="http://mengshige.github.io/about/">
+<meta name="twitter:title" content="usb 端口绑定">
+<meta name="twitter:description" content="查看usb设备端口编号  1$udevadm info /dev/ttyUSB0 例如第一行,记住1-4:1.01P: /devices/pci0000:00/0000:00:14.0/usb1/1-4/1-4:1.0/ttyUSB1/tty/ttyUSB0  新建&amp;amp;编辑 rules文件12$sudo touch /etc/udev/rules.d/myUSB.rules$sudo vi">
+  <link rel="canonical" href="http://mengshige.github.io/2020/10/19/usb-端口绑定/">
 
 
 <script id="page-configurations">
@@ -74,13 +75,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>about me | MSG</title>
+  <title>usb 端口绑定 | MSG</title>
   
 
 
@@ -210,61 +211,170 @@
         <div class="content-wrap">
             
 
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-  
-
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
-    
-    
-    
-    <div class="post-block page">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://mengshige.github.io/2020/10/19/usb-端口绑定/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mengshige">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MSG">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">usb 端口绑定
 
-<h1 class="post-title" itemprop="name headline">about me
+          
+        </h1>
 
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-<div class="post-meta">
+              
+                
+              
+
+              <time title="创建时间：2020-10-19 15:22:16 / 修改时间：15:36:57" itemprop="dateCreated datePublished" datetime="2020-10-19T15:22:16+08:00">2020-10-19</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <ol>
+<li>查看usb设备端口编号</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$udevadm info /dev/ttyUSB0</span><br></pre></td></tr></table></figure>
+<p>例如第一行,记住1-4:1.0<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">P: /devices/pci0000:00/0000:00:14.0/usb1/1-4/1-4:1.0/ttyUSB1/tty/ttyUSB0</span><br></pre></td></tr></table></figure></p>
+<ol start="2">
+<li>新建&amp;编辑 rules文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$sudo touch /etc/udev/rules.d/myUSB.rules</span><br><span class="line">$sudo vi /etc/udev/rules.d/myUSB.rules</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>输入内容如下,注意KERNELS==上面列出的端口号”1-4:1.0”,SYMLINK+=”自己起一个喜欢的名字”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ACTION==&quot;add&quot;,SUBSYSTEMS==&quot;usb&quot;, KERNELS==&quot;1-4:1.0&quot;,MODE:=&quot;0666&quot;,SYMLINK+=&quot;WheelPort&quot;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><p>保存重启</p>
+</li>
+<li><p>检查 ls -l /dev/WheelPort</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">lrwxrwxrwx  1 root        7 10月 19 14:22 WheelPort -&gt; ttyUSB0</span><br></pre></td></tr></table></figure>
+
+	
+  <div class="my_post_copyright">
+    <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+    
+    <!-- JS库 sweetalert 可修改路径 -->
+    <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <p><span>本文标题:</span><a href="/2020/10/19/usb-端口绑定/">usb 端口绑定</a></p>
+    <p><span>文章作者:</span><a href="/" title="访问 mengshige 的个人博客">mengshige</a></p>
+    <p><span>发布时间:</span>2020年10月19日 - 15:22</p>
+    <p><span>最后更新:</span>2020年10月19日 - 15:36</p>
+  <p><span>原始链接:</span><a href="/2020/10/19/usb-端口绑定/" title="usb 端口绑定">http://mengshige.github.io/2020/10/19/usb-端口绑定/</a>
+      <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://mengshige.github.io/2020/10/19/usb-端口绑定/"  aria-label="复制成功！"></i></span>
+    </p>
+    <p><span>版权声明:</span>本博客所有文章除特别声明外，均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"><i class="fa fa-creative-commons"></i>BY-NC-SA </a>许可协议。转载请注明出处!</p>  
+  </div>
+  <script> 
+      var clipboard = new Clipboard('.fa-clipboard');
+        $(".fa-clipboard").click(function(){
+        clipboard.on('success', function(){
+          swal({   
+            title: "",   
+            text: '复制成功',
+            icon: "success", 
+            showConfirmButton: true
+            });
+          });
+      });  
+  </script>
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-        
-          <p><a href="https://mengshige.github.com" target="_blank" rel="noopener">github</a>  </p>
-<p>(<a href="mailto:302545782@qq.com" target="_blank" rel="noopener">302545782@qq.com</a>)</p>
-
-        
-      </div>
-      
-      
-      
     </div>
-    
 
     
     
     
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/linux/" rel="tag"># linux</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/09/29/ros编译错误deserialize/" rel="next" title="ros编译错误deserialize">
+                  <i class="fa fa-chevron-left"></i> ros编译错误deserialize
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
   </div>
 
 
