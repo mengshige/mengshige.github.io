@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="github   (302545782@qq.com)">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about me">
-<meta property="og:url" content="http://mengshige.github.io/about/index.html">
+  <meta name="description" content="下载hostapd,udhcpd  12$sudo apt update$sudo apt install hostapd udhcpd  配置hostapd,/etc/hostapd/hostapd.conf,没有该文件就重新建立一个加入以下内容，下面设置ssid = raspberry_pi,passwd = abcd.1234  123456789101112131415161718192">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设置树莓派开机热点">
+<meta property="og:url" content="http://mengshige.github.io/2021/04/29/设置树莓派开机热点/index.html">
 <meta property="og:site_name" content="MSG">
-<meta property="og:description" content="github   (302545782@qq.com)">
+<meta property="og:description" content="下载hostapd,udhcpd  12$sudo apt update$sudo apt install hostapd udhcpd  配置hostapd,/etc/hostapd/hostapd.conf,没有该文件就重新建立一个加入以下内容，下面设置ssid = raspberry_pi,passwd = abcd.1234  123456789101112131415161718192">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-19T15:13:02.000Z">
+<meta property="og:updated_time" content="2021-04-29T07:10:14.233Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about me">
-<meta name="twitter:description" content="github   (302545782@qq.com)">
-  <link rel="canonical" href="http://mengshige.github.io/about/">
+<meta name="twitter:title" content="设置树莓派开机热点">
+<meta name="twitter:description" content="下载hostapd,udhcpd  12$sudo apt update$sudo apt install hostapd udhcpd  配置hostapd,/etc/hostapd/hostapd.conf,没有该文件就重新建立一个加入以下内容，下面设置ssid = raspberry_pi,passwd = abcd.1234  123456789101112131415161718192">
+  <link rel="canonical" href="http://mengshige.github.io/2021/04/29/设置树莓派开机热点/">
 
 
 <script id="page-configurations">
@@ -74,13 +74,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>about me | MSG</title>
+  <title>设置树莓派开机热点 | MSG</title>
   
 
 
@@ -210,61 +210,150 @@
         <div class="content-wrap">
             
 
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-  
-
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
-    
-    
-    
-    <div class="post-block page">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://mengshige.github.io/2021/04/29/设置树莓派开机热点/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mengshige">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MSG">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">设置树莓派开机热点
 
-<h1 class="post-title" itemprop="name headline">about me
+          
+        </h1>
 
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-<div class="post-meta">
+              
+                
+              
+
+              <time title="创建时间：2021-04-29 14:57:20 / 修改时间：15:10:14" itemprop="dateCreated datePublished" datetime="2021-04-29T14:57:20+08:00">2021-04-29</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <ul>
+<li>下载hostapd,udhcpd</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$sudo apt update</span><br><span class="line">$sudo apt install hostapd udhcpd</span><br></pre></td></tr></table></figure>
+<ul>
+<li>配置hostapd,/etc/hostapd/hostapd.conf,没有该文件就重新建立一个<br>加入以下内容，下面设置ssid = raspberry_pi,passwd = abcd.1234</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#basic configuration</span><br><span class="line"></span><br><span class="line">interface=wlan0</span><br><span class="line">ssid=raspberry_pi</span><br><span class="line">channel=1</span><br><span class="line"></span><br><span class="line">#wpa and wpa2 configuration</span><br><span class="line"></span><br><span class="line">macaddr_acl=0</span><br><span class="line">auth_algs=1</span><br><span class="line">ignore_broadcast_ssid=0</span><br><span class="line">wpa=2</span><br><span class="line">wpa_passphrase=abcd.1234</span><br><span class="line">wpa_key_mgmt=WPA-PSK</span><br><span class="line">wpa_pairwise=TKIP</span><br><span class="line">rsn_pairwise=CCMP</span><br><span class="line"></span><br><span class="line">#hardware config</span><br><span class="line"></span><br><span class="line">driver=nl80211</span><br></pre></td></tr></table></figure>
+<ul>
+<li>配置udhcpd,/etc/udhcpd.conf,主要修改下面两行<br>配置网关为192.168.60.1，掩码255.255.255.0</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#Examles</span><br><span class="line">opt	dns	114.114.114.114 8.8.8.8</span><br><span class="line">option	subnet	255.255.255.0</span><br><span class="line">opt	router	192.168.60.1</span><br><span class="line">#opt	wins	192.168.10.10</span><br></pre></td></tr></table></figure>
+<ul>
+<li>设置开机启动,/etc/rc.local<br>设置网卡IP为192.168.60.1,内如如下。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ifconfig wlan0 192.168.60.1 netmask 255.255.255.0 up</span><br><span class="line"></span><br><span class="line">hostapd /etc/hostapd/hostapd.conf -B</span><br><span class="line">udhcpd /etc/udhcpd.conf</span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure>
+<ul>
+<li>重启，尝试ssh 连接树莓派</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh pi@192.168.60.1</span><br></pre></td></tr></table></figure>
+
+	
+  <div class="my_post_copyright">
+    <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+    
+    <!-- JS库 sweetalert 可修改路径 -->
+    <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <p><span>本文标题:</span><a href="/2021/04/29/设置树莓派开机热点/">设置树莓派开机热点</a></p>
+    <p><span>文章作者:</span><a href="/" title="访问 mengshige 的个人博客">mengshige</a></p>
+    <p><span>发布时间:</span>2021年04月29日 - 14:57</p>
+    <p><span>最后更新:</span>2021年04月29日 - 15:10</p>
+  <p><span>原始链接:</span><a href="/2021/04/29/设置树莓派开机热点/" title="设置树莓派开机热点">http://mengshige.github.io/2021/04/29/设置树莓派开机热点/</a>
+      <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://mengshige.github.io/2021/04/29/设置树莓派开机热点/"  aria-label="复制成功！"></i></span>
+    </p>
+    <p><span>版权声明:</span>本博客所有文章除特别声明外，均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"><i class="fa fa-creative-commons"></i>BY-NC-SA </a>许可协议。转载请注明出处!</p>  
+  </div>
+  <script> 
+      var clipboard = new Clipboard('.fa-clipboard');
+        $(".fa-clipboard").click(function(){
+        clipboard.on('success', function(){
+          swal({   
+            title: "",   
+            text: '复制成功',
+            icon: "success", 
+            showConfirmButton: true
+            });
+          });
+      });  
+  </script>
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-        
-          <p><a href="https://mengshige.github.com" target="_blank" rel="noopener">github</a>  </p>
-<p>(<a href="mailto:302545782@qq.com" target="_blank" rel="noopener">302545782@qq.com</a>)</p>
-
-        
-      </div>
-      
-      
-      
     </div>
-    
 
     
     
     
+        
+      
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2021/04/09/hello-world/" rel="next" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
   </div>
 
 
